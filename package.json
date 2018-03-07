@@ -1,5 +1,8 @@
 {
     "scripts": {
-        "build-gencerts": "docker build -t damp/gencerts gencerts"
+        "build-gencerts": "docker build -t damp/gencerts gencerts",
+        "run-gencerts": "mkdir -p certs && docker run --rm -v `pwd`/certs:/certs damp/gencerts",
+        "build-server": "docker build -t damp/mysql-server-ssl .",
+        "run-server": "docker run --name mysql-server-ssl -p 3306:3306 -v `pwd`/mysql-data:/var/lib/mysql damp/mysql-server-ssl"
     }
 }
