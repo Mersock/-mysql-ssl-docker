@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "build-gencerts": "docker build -t damp/gencerts gencerts"
+    }
+}
