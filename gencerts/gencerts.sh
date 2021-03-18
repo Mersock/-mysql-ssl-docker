@@ -30,15 +30,3 @@ openssl x509 -req -in client-req.pem -days 3600 \
 openssl verify -CAfile ca.pem server-cert.pem client-cert.pem
 
 # chmod 600 client-key.pem server-key.pem ca-key.pem
-
-
-# TODO - need a my.cnf
-# TODO - need a MySQL container that uses the above certificates and that my.cnf 
-# TODO - need a sample app to do data stuff with that MySQL instance 
-
-
-# NO the following is excess work that's unnecessary for this project?
-# TODO - setup an organization on gitlab for damp-stack
-# TODO - setup container - damp/openssl-tools published to Docker Hub
-# TODO - use Gitlab CI to autopublish that container once a week
-# TODO - setup a container that has the above as its CMD script

@@ -1,3 +1,5 @@
 certs
 mysql-data
 node_modules
+database
+package-lock.json

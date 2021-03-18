@@ -4,11 +4,11 @@ const mysql = require('mysql');
 var connection = mysql.createConnection({
     host: '127.0.0.1',
     port: '3306',
-    user: 'root',
-    password: 'passw0rd',
-    database: 'test',
+    user: 'wpuserssl',
+    // password: 'r00tr00t',
+    database: 'wpdb',
     ssl: {
-        ca: fs.readFileSync(__dirname + '/certs/ca.pem'),
+        ca: fs.readFileSync(__dirname + '/certs/root-ca.pem'),
         key: fs.readFileSync(__dirname + '/certs/client-key.pem'),
         cert: fs.readFileSync(__dirname + '/certs/client-cert.pem')
     }
